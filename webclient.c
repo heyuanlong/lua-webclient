@@ -401,7 +401,7 @@ luaL_Reg webclient_funs[] = {
     { NULL, NULL }
 };
 
-int luaopen_webclient(lua_State * L)
+int luaopen_webclient_c(lua_State * L)
 {
     luaL_checkversion(L);
     

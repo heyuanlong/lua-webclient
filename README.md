@@ -16,3 +16,10 @@
 		
 			
 	
+## for-skynet
+
+change webclient.c  "int luaopen_webclient_c(lua_State * L)"
+
+
+$(LUA_CLIB_PATH)/webclient.so : lualib-src/webclient.c | $(LUA_CLIB_PATH)
+	$(CC) $(CFLAGS) $(SHARED) -std=c99 -lcurl -Iskynet-src $^ -o $@
